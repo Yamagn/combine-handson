@@ -9,7 +9,7 @@ final class SearchViewModel: ObservableObject, Identifiable {
     private var disposables = Set<AnyCancellable>()
 
     func  searchChannels(q: String) {
-        api.SearchApi(query: q)
+        api.searchApi(query: q)
             .map { response in
                 response.items.map { $0.snippet }
             }

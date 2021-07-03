@@ -18,7 +18,9 @@ struct SearchView: View {
                 }
                 Section {
                     ForEach(0..<viewModel.dataSources.count, id: \.self) { row in
-                        Text(viewModel.dataSources[row].title)
+                        NavigationLink(destination: VideosView(channelId: viewModel.dataSources[row].channelId, channelTitle: viewModel.dataSources[row].title)) {
+                            Text(viewModel.dataSources[row].title)
+                        }
                     }
                 }
             }

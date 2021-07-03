@@ -1,19 +1,18 @@
 import Foundation
 
-struct Search: Codable {
+struct PlaylistItem: Codable {
     let items: [Item]
-    
+
     struct Item: Codable {
         let snippet: Snippet
     }
 
     struct Snippet: Codable {
-        let channelId: String
         let title: String
-    }
+        let resourceId: ResourceId
 
-    struct High: Codable {
-        let url: String
+        struct ResourceId: Codable {
+            let videoId: String
+        }
     }
 }
-
