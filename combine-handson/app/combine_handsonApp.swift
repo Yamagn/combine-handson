@@ -4,7 +4,7 @@ import SwiftUI
 struct combine_handsonApp: App {
     var body: some Scene {
         WindowGroup {
-            MainView()
+            SearchView()
         }
     }
 }
