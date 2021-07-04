@@ -14,7 +14,7 @@ struct VideosView: View {
         List {
             ForEach(0..<viewModel.videos.count, id: \.self) { row in
                 Button(action: {
-                    if let url = URL(string: viewModel.videos[row].resourceId.videoId) {
+                    if let url = URL(string: "https://youtube.com/watch?v=" + viewModel.videos[row].resourceId.videoId) {
                         UIApplication.shared.open(url)
                     }
                 }, label: {
