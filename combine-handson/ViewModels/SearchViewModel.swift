@@ -4,7 +4,6 @@ import Combine
 final class SearchViewModel: ObservableObject, Identifiable {
     @Published var dataSources: [Search.Snippet] = []
     @Published var query: String = ""
-    @Published var imageData: Data? = nil
     private let api = YTDataApi()
     private var disposables = Set<AnyCancellable>()
 

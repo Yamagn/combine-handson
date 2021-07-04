@@ -11,9 +11,5 @@ struct Search: Codable {
         let channelId: String
         let title: String
     }
-
-    struct High: Codable {
-        let url: String
-    }
 }
 
